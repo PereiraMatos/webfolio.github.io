@@ -26,57 +26,197 @@
 
   .about__bio {
     font-size: 1rem;
+
+    .text-secondary {
+      font-size: 1.8rem;
+      padding-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+    }
   }
 
   .projects {
     &__bio-image {
-      height: 40vh;
+      background: url("../img/fundo.gif") center top;
+      padding-bottom: 5vh;
     }
+
     &__items {
       grid-template-columns: repeat(2, 1fr);
     }
     .text-secondary {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 
-  .contact__list {
-    grid-template-columns: repeat(2, 1fr);
+  .contact {
+    padding-top: 35vh;
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      font-size: 1rem;
+    }
+
+    .text-secondary {
+      padding-top: 0.8rem;
+    }
+
+    .social-icons {
+      position: initial;
+      margin-top: 1.5rem;
+      margin-right: 4.4rem;
+
+      .fa-2x {
+        padding-right: 0.4rem;
+        font-size: 1.8em;
+      }
+    }
   }
 }
 
 @include media-lg {
+  .home h1 {
+    font-size: 3rem;
+  }
+  .home h2 {
+    font-size: 1.05rem;
+  }
   .about__bio-image {
-    background: linear-gradient(
-        to left,
-        rgba($third-color, 0.9),
-        rgba($third-color, 0.3)
-      ),
-      url("../img/perfil.jpg") center top;
+    background: url("../img/fundo.gif") center top;
   }
 
+  .about__bio {
+    width: 60%;
+    text-align: center;
+    line-height: 1.7rem;
+    font-weight: 400;
+
+    .text-secondary {
+      font-size: 1.8rem;
+      padding-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px #000;
+      line-height: 1rem;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  }
   .projects {
+    &__bio-image {
+      background: url("../img/fundo.gif") center top;
+      padding-bottom: 5vh;
+    }
+
     &__items {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
-  .contact__list {
-    grid-template-columns: repeat(3, 1fr);
+  .contact {
+    padding-top: 40vh;
+
+    h2 {
+      font-weight: 500;
+      font-size: 3rem;
+      margin-bottom: 6rem;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      font-size: 1rem;
+    }
+
+    .text-secondary {
+      padding-top: 1rem;
+    }
+
+    .social-icons {
+      position: initial;
+      margin-top: 5rem;
+      margin-right: 0rem;
+
+      .fa-2x {
+        padding-left: 0rem;
+        font-size: 1.8em;
+      }
+    }
   }
 }
 
 @include media-xl {
+  .home h1 {
+    font-size: 3rem;
+  }
+  .home h2 {
+    font-size: 1.05rem;
+  }
+
   .about__bio-image {
-    background: linear-gradient(
-        to left bottom,
-        rgba($third-color, 0.9),
-        rgba($third-color, 0.3)
-      ),
-      url("../img/perfil.jpg") center top;
+    background: url("../img/fundo.gif") center top;
+  }
+
+  .about__bio {
+    width: 58%;
+    text-align: center;
+    line-height: 1.7rem;
+    font-weight: 400;
+
+    .text-secondary {
+      font-size: 1.8rem;
+      padding-bottom: 3rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    p {
+      padding-bottom: 3rem;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
   }
 
   .projects__bio-image {
-    height: 50vh;
+    background: url("../img/fundo.gif") center top;
+    padding-bottom: 5vh;
+  }
+
+  .contact {
+    padding-top: 40vh;
+
+    h2 {
+      font-weight: 500;
+      font-size: 3rem;
+      margin-bottom: 8rem;
+    }
+    .text-secondary {
+      padding-top: 1.4rem;
+    }
+    .social-icons {
+      position: initial;
+      margin-top: 5rem;
+
+      .fa-2x {
+        font-size: 2em;
+      }
+    }
   }
 }
