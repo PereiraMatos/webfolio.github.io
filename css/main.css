@@ -20,16 +20,34 @@
 }
 
 .home__name {
-  font-size: 3rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #fff;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 
 .home__name--last {
   color: #1398eb;
   font-weight: 600;
   text-shadow: 1px 2px 15px #000;
+}
+
+.home hr {
+  border: none;
+  height: 1px;
+  -webkit-transition: color 2s ease-in-out;
+  transition: color 2s ease-in-out;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 3px #1398eb;
+          box-shadow: 0px 0px 3px #1398eb;
+}
+
+.home hr:hover {
+  -webkit-transition: color 2s ease-in-out;
+  transition: color 2s ease-in-out;
+  background-color: #1398eb;
+}
+
+.home h2 {
+  margin-top: 0.8rem;
 }
 
 .menu-btn {
@@ -199,10 +217,9 @@
 }
 
 .about__bio-image {
-  height: 50vh;
+  height: 40vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("../img/perfil_2.jpg") center top;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../img/perfil_2.jpg") center top;
+  background: url("../img/fundo.gif") center top;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,9 +249,15 @@
 }
 
 .about__bio .text-secondary {
+  font-size: 1.6rem;
   padding-bottom: 1rem;
   font-weight: 700;
   text-shadow: 1px 1px 5px #000;
+}
+
+.about__bio p {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 .about .jobs {
@@ -296,10 +319,9 @@
 }
 
 .projects__bio-image {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(25, 25, 25, 0.9)), to(rgba(25, 25, 25, 0.3))), url("../img/fundo.jpg") center top;
-  background: linear-gradient(to right, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.3)), url("../img/fundo.jpg") center top;
+  background: url("../img/fundo.gif") center top;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +339,7 @@
 }
 
 .projects__bio-image .text-secondary {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 600;
   text-shadow: 1px 2px 8px #000;
@@ -410,7 +432,7 @@
 
 .contact {
   height: 100%;
-  padding-top: 40vh;
+  padding-top: 30vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,14 +444,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(25, 25, 25, 0.9)), to(rgba(25, 25, 25, 0.3))), url("../img/fundo.jpg") center top;
-  background: linear-gradient(to right, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.3)), url("../img/fundo.jpg") center top;
+  background: url("../img/fundo.gif") center top;
   background-size: cover;
 }
 
 .contact h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contact__list {
@@ -437,13 +459,27 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  font-size: 1.5rem;
+  grid-gap: 1rem;
+  font-size: 1rem;
+}
+
+.contact__list .contact__address {
+  padding-right: 5rem;
+}
+
+.contact .text-secondary {
+  padding-top: 0.8rem;
 }
 
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
+  margin-right: 4.6rem;
+}
+
+.contact .social-icons .fa-2x {
+  padding-right: 0.5rem;
+  font-size: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -471,44 +507,171 @@
   .about__bio {
     font-size: 1rem;
   }
+  .about__bio .text-secondary {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #000;
+  }
+  .about__bio p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
   .projects__bio-image {
-    height: 40vh;
+    background: url("../img/fundo.gif") center top;
+    padding-bottom: 5vh;
   }
   .projects__items {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
   .projects .text-secondary {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .contact {
+    padding-top: 35vh;
+  }
+  .contact h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 4rem;
   }
   .contact__list {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    font-size: 1rem;
+  }
+  .contact .text-secondary {
+    padding-top: 0.8rem;
+  }
+  .contact .social-icons {
+    position: initial;
+    margin-top: 1.5rem;
+    margin-right: 4.4rem;
+  }
+  .contact .social-icons .fa-2x {
+    padding-right: 0.4rem;
+    font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .home h1 {
+    font-size: 3rem;
+  }
+  .home h2 {
+    font-size: 1.05rem;
+  }
   .about__bio-image {
-    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))), url("../img/perfil.jpg") center top;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("../img/perfil.jpg") center top;
+    background: url("../img/fundo.gif") center top;
+  }
+  .about__bio {
+    width: 60%;
+    text-align: center;
+    line-height: 1.7rem;
+    font-weight: 400;
+  }
+  .about__bio .text-secondary {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #000;
+    line-height: 1rem;
+  }
+  .about__bio p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .projects__bio-image {
+    background: url("../img/fundo.gif") center top;
+    padding-bottom: 5vh;
   }
   .projects__items {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .contact {
+    padding-top: 40vh;
+  }
+  .contact h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 6rem;
+  }
   .contact__list {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    font-size: 1rem;
+  }
+  .contact .text-secondary {
+    padding-top: 1rem;
+  }
+  .contact .social-icons {
+    position: initial;
+    margin-top: 5rem;
+    margin-right: 0rem;
+  }
+  .contact .social-icons .fa-2x {
+    padding-left: 0rem;
+    font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 1600px) {
+  .home h1 {
+    font-size: 3rem;
+  }
+  .home h2 {
+    font-size: 1.05rem;
+  }
   .about__bio-image {
-    background: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.3))), url("../img/perfil.jpg") center top;
-    background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("../img/perfil.jpg") center top;
+    background: url("../img/fundo.gif") center top;
+  }
+  .about__bio {
+    width: 58%;
+    text-align: center;
+    line-height: 1.7rem;
+    font-weight: 400;
+  }
+  .about__bio .text-secondary {
+    font-size: 1.8rem;
+    padding-bottom: 3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #000;
+  }
+  .about__bio p {
+    padding-bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
   .projects__bio-image {
-    height: 50vh;
+    background: url("../img/fundo.gif") center top;
+    padding-bottom: 5vh;
+  }
+  .contact {
+    padding-top: 40vh;
+  }
+  .contact h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 8rem;
+  }
+  .contact .text-secondary {
+    padding-top: 1.4rem;
+  }
+  .contact .social-icons {
+    position: initial;
+    margin-top: 5rem;
+  }
+  .contact .social-icons .fa-2x {
+    font-size: 2em;
   }
 }
 
@@ -527,7 +690,7 @@ h3 {
 
 h2 {
   font-weight: 400;
-  font-size: 1.05rem;
+  font-size: 0.7rem;
 }
 
 h2 span {
@@ -564,6 +727,7 @@ main .social-icons {
 
 main .social-icons a {
   padding: 0.4rem;
+  font-size: 0.7em;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
