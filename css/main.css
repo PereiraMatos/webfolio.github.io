@@ -236,9 +236,17 @@
           justify-content: flex-end;
 }
 
+.about__bio-image h2 {
+  visibility: hidden;
+}
+
 .about__bio-image p {
   margin-bottom: 2rem;
   text-shadow: 1px 1px 5px #000;
+}
+
+.about__bio-image .bio-pt1 {
+  visibility: hidden;
 }
 
 .about__bio {
@@ -583,7 +591,7 @@
   }
   .about__bio p {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
   .projects__bio-image {
@@ -646,10 +654,17 @@
     font-weight: 700;
     text-shadow: 1px 1px 5px #000;
   }
+  .about__bio h2 {
+    visibility: visible;
+  }
   .about__bio p {
+    margin-top: 2rem;
     padding-bottom: 3rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  .about__bio .bio-pt1 {
+    visibility: visible;
   }
   .projects__bio-image {
     background: url("../img/fundo.gif") center top;
